@@ -22,8 +22,12 @@ nouveau_point = [3, 3]
 def distance(point1, point2):
     return np.sqrt(np.sum((point1 - point2) ** 2))
 
-    
+row0 = donnees_entrainement[0]
+for row in donnees_entrainement:
+ distance = distance(row0, row)
+ print(distance)
 
+#https://machinelearningmastery.com/tutorial-to-implement-k-nearest-neighbors-in-python-from-scratch/
 
 prediction = knn(donnees_entrainement, etiquettes_entrainement, nouveau_point, k)
 
